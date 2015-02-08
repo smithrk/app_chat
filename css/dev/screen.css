@@ -19,38 +19,51 @@
 */
 /* line 1, ../sass/structure/_structure.scss */
 .viewWrapper {
-  height: 80%;
+  height: 79.5%;
   width: 90%;
   background-color: lightblue;
   border-style: solid;
   border-width: 5px;
+  position: absolute;
 }
 
-/* line 8, ../sass/structure/_structure.scss */
+/* line 9, ../sass/structure/_structure.scss */
 .messageView {
-  height: 80%;
+  height: 79.5%;
   width: 69.5%;
   border-style: solid 1px;
   display: inline-block;
-  background-color: black;
+  background-color: lightgrey;
+  padding-left: 10px;
+}
+/* line 16, ../sass/structure/_structure.scss */
+.messageView .messageEntry {
+  color: #000;
 }
 
-/* line 16, ../sass/structure/_structure.scss */
+/* line 21, ../sass/structure/_structure.scss */
 .userListView {
-  height: 80%;
+  height: 79.5%;
   width: 29.5%;
   display: inline-block;
   background-color: green;
   float: right;
 }
 
-/* line 23, ../sass/structure/_structure.scss */
+/* line 28, ../sass/structure/_structure.scss */
 .messageEntryFormView {
-  height: 20%;
+  height: 19.5%;
   width: 100%;
   bottom: 0px;
-  position: relative;
+  position: absolute;
   background-color: blue;
+}
+
+/* line 35, ../sass/structure/_structure.scss */
+.userName {
+  color: #003B64;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 /*!
