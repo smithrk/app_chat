@@ -1,0 +1,44 @@
+/*!
+* Description: CSS Styles. 
+*/
+/**
+* These include the SASS files and output them to a CSS file. All the styles
+* should make a small css file that can be downloaded once and cached to
+* improve the end user experience. If the outputted file is found to be too
+* large, it can be broken up into smaller files.
+*/
+
+@import 'colors/colors';
+@import 'fonts/fonts';
+
+/* Include the external files/plugins
+*/
+
+/*!
+* Line break
+*/
+/**
+* These are the site core stylings. Things like global a, h1, p stylings 
+* should and default page structure go in here. Anything specific to a single 
+* page or override should go in the pages sections.
+*/
+@import 'structure/structure';
+@import 'themes/businessBlue';
+
+/*!
+* Line break
+*/
+/**
+* These are the styles that are page specific. In an ideal world; these would
+* not exist as all pages would be similiar.
+*
+* notes below so files can be either linked to or included globally later if possible
+ */
+
+
+/* Include this last so it overrides settings form pages */
+
+/*!
+* Line break
+*/
+
