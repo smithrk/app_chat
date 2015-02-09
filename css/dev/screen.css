@@ -18,7 +18,7 @@
 * page or override should go in the pages sections.
 */
 /* line 1, ../sass/structure/_structure.scss */
-.viewWrapper {
+.chatWrapper {
   height: 79.5%;
   width: 90%;
   background-color: lightblue;
@@ -35,13 +35,14 @@
   display: inline-block;
   background-color: lightgrey;
   padding-left: 10px;
+  overflow: scroll;
 }
-/* line 16, ../sass/structure/_structure.scss */
-.messageView .messageEntry {
+/* line 19, ../sass/structure/_structure.scss */
+.messageView .messageEntry .userMessage {
   color: #000;
 }
 
-/* line 21, ../sass/structure/_structure.scss */
+/* line 24, ../sass/structure/_structure.scss */
 .userListView {
   height: 79.5%;
   width: 29.5%;
@@ -50,7 +51,7 @@
   float: right;
 }
 
-/* line 28, ../sass/structure/_structure.scss */
+/* line 31, ../sass/structure/_structure.scss */
 .messageEntryFormView {
   height: 19.5%;
   width: 100%;
@@ -59,7 +60,7 @@
   background-color: blue;
 }
 
-/* line 35, ../sass/structure/_structure.scss */
+/* line 38, ../sass/structure/_structure.scss */
 .userName {
   color: #003B64;
   text-transform: capitalize;

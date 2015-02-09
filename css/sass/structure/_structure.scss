@@ -1,4 +1,4 @@
-.viewWrapper{
+.chatWrapper{
 	height: 79.5%;
 	width: 90%;
 	background-color: lightblue;
@@ -13,10 +13,13 @@
 	display: inline-block;
 	background-color: lightgrey;
 	padding-left: 10px;
+	overflow: scroll;
 	.messageEntry{
-		color: $jetBlack;
+		
+		.userMessage{
+			color: $jetBlack;
+		}
 	}
-
 }
 .userListView{
 	height: 79.5%;
