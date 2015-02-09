@@ -1,0 +1,4 @@
+var messageModel = {
+	userName:"",
+	message:""
+};
