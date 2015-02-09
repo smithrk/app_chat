@@ -1,7 +1,7 @@
 .chatWrapper{
 	height: 79.5%;
 	width: 90%;
-	background-color: lightblue;
+	background-color: $jetBlack;
 	border-style: solid;
 	border-width: 5px;
 	position: absolute;
@@ -23,7 +23,7 @@
 }
 .userListView{
 	height: 79.5%;
-	width: 29.5%;
+	width: 27.5%;
 	display: inline-block;
 	background-color: green;
 	float: right;
