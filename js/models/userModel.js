@@ -12,11 +12,13 @@ var userModel = function(userName, Id){
 	"Message Four",
 	"Message Five"];
 
-	function submitMessage(speed){
+	function submitMessage(message){
+		appChatRoom.chatRoom.post(userName, message);
+	}
+	function aiMessage(speed){
 		if(appChatRoom.chatRoom.messagePointer >= messages.length){
 			appChatRoom.chatRoom.messagePointer = 0;
 		}
-		debugger
 		if(appChatRoom.chatRoom.messagePointer > 0){
 		var message = "@" + appChatRoom.chatRoom.getLastMessage().userName 
 						  + " " + messages[appChatRoom.chatRoom.messagePointer];
@@ -26,16 +28,17 @@ var userModel = function(userName, Id){
 		}
 		appChatRoom.chatRoom.post(userName, message);
 		appChatRoom.chatRoom.messagePointer++;
-		var randomTime = Math.random()*(5000-1000) + 1000;
-		setTimeout(submitMessage, randomTime);
+		var randomTime = Math.random()*(10000-1000) + 1000;
+		setTimeout(aiMessage, randomTime);
 	}
-	(function initialize(){
+	function initializeAi(){
 		if(!appChatRoom.chatRoom.messagePointer){
 		appChatRoom.chatRoom.messagePointer = 0;
 		}
-		var randomTime = Math.random()*(5000-1000) + 1000;
-		setTimeout(submitMessage, randomTime);
-	})();
-	return {submitMessage:submitMessage}
+		var randomTime = Math.random()*(10000-1000) + 1000;
+		setTimeout(aiMessage, randomTime);
+	};
+	return {submitMessage:submitMessage,
+			initializeAi:initializeAi}
 }
 

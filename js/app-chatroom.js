@@ -1,6 +1,8 @@
 var appChatRoom = (function(){ 
 	$.getScript("/js/plugins/pubSubPlugin.js");
 	$.getScript("/js/views/messageView.js");
+	$.getScript("/js/views/usersOnlineView.js");
+	$.getScript("/js/views/chatTextEntryView.js")
 	$.getScript("/js/models/messageModel.js");
 	$.getScript("/js/models/userModel.js");
 	$.getScript("/js/controllers/chatRoomController.js");

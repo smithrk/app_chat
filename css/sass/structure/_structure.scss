@@ -11,7 +11,7 @@
 	width: 69.5%;
 	border-style: solid 1px;
 	display: inline-block;
-	background-color: lightgrey;
+	background-color: $neutralGrey;
 	padding-left: 10px;
 	overflow: scroll;
 	.messageEntry{
@@ -26,7 +26,17 @@
 	width: 27.5%;
 	display: inline-block;
 	background-color: green;
+	position: relative;
 	float: right;
+	.usersOnlineHeader{
+		display:block;
+		background-color: $neutralGrey;
+		height:20%;
+		width:100%;
+		text-align: bottom;
+		position: relative;
+
+	}
 }
 .messageEntryFormView{
 	height: 19.5%;
@@ -34,9 +44,46 @@
 	bottom: 0px;
 	position: absolute;
 	background-color: blue;
+	#inputMessageBlock{
+		height: 80%;
+		width: 80%;
+		background-color: $neutralGrey;
+		display: inline-block;
+		border: 5px inset $neutralGrey;
+		position: center;
+		padding-top: 1%;
+	}
+	input[type=submit] {
+	    background: transparent url("/assets/images/send-button-orange.png") 0 0 no-repeat;
+	    font-weight: bold;
+	    display: inline-block;
+	    text-align: center;
+	    cursor: pointer;
+	    height: 80%; /* height of the background image */
+	    width: auto; /* width of the background image */
+	    border: 5px solid #fff;
+	    border-radius: 4em;
+	}
 }
 .userName{
 	color: $bestBuyBlue;
 	text-transform: capitalize;
 	font-weight: bold;
+}
+.loginPage{
+	background-color: $bestBuyBlue;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	.loginContainer{
+		background-color: $neutralGrey;
+		height: 50%;
+		width: 50%;
+		position: relative;
+		margin: 12% 23%;
+	}
+	.welcomeMessage{
+		padding-top: 10%;
+	}
 }
