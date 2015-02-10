@@ -12,7 +12,8 @@ var messageView = function(){
 		userNameEl.innerHTML= message.userName+": ";
 		this.$el.appendChild(messageEntryEl);
 		userMessageEl.innerHTML= message.message;
-		messageEntryEl.scrollIntoView();
+		//messageEntryEl.scrollIntoView();
+		$("this.userMessageEl").scrollintoview();
 	};
 
 	return {

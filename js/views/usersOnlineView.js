@@ -1,23 +1,38 @@
 var usersOnlineView = function(){
 	$el = document.getElementById("chatUsers");
-	displayUsers = function(users){
-		debugger
+	var displayUsers = function(users){
+		
+		
+		
+		
+		userEl.innerHTML = users[0].userName;
+		
+		
+		
+	};
+	var render = function(users){
+		this.$el.innerHTML = "";
 		var usersOnlineHeaderEl = document.createElement('div');
 		usersOnlineHeaderEl.className = "usersOnlineHeader";
-		var userListContainerEl = document.createElement('div');
-		userListContainerEl.className = "userListContainer";
-		var userEl = document.createElement('p');
-		userEl.className = "userOnlineName";
-		userListContainerEl.appendChild(userEl);
-		userEl.innerHTML= users[0].userName;
 		usersOnlineHeaderEl.innerHTML= "Users Online";
 		this.$el.appendChild(usersOnlineHeaderEl);
+		var userListContainerEl = document.createElement('div');
+		userListContainerEl.className = "userListContainer";
 		this.$el.appendChild(userListContainerEl);
-		userListContainerEl.scrollIntoView();
+		var usersOnlineFooterEl = document.createElement('div');
+		usersOnlineFooterEl.className = "usersOnlineFooter";
+		var usersOnlineSearchImg = document.createElement('img');
+		usersOnlineSearchImg.className = "usersOnlineSearchImg";
+		for(i=0; i < users.length; i++){
+			var userEl = document.createElement('li');
+			userEl.className = "userOnlineName";
+			userListContainerEl.appendChild(userEl);
+			userEl.innerHTML = users[i].getUserName(); 
+		};
 	};
-
 	return {
 		$el: $el,
-		displayUsers: displayUsers
-	}
+		displayUsers: displayUsers,
+		render:render
+	};
 };

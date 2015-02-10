@@ -1,5 +1,6 @@
 var userModel = function(userName, Id){
 	var userName = userName;
+	var loggedIn = false;
 	var Id = Id;
 	if(!userName && !Id){
 		return null;
@@ -29,16 +30,24 @@ var userModel = function(userName, Id){
 		appChatRoom.chatRoom.post(userName, message);
 		appChatRoom.chatRoom.messagePointer++;
 		var randomTime = Math.random()*(10000-1000) + 1000;
-		setTimeout(aiMessage, randomTime);
+		if(loggedIn === true){
+			setTimeout(aiMessage, randomTime);
+		};
 	}
 	function initializeAi(){
 		if(!appChatRoom.chatRoom.messagePointer){
 		appChatRoom.chatRoom.messagePointer = 0;
 		}
+		loggedIn = true;
 		var randomTime = Math.random()*(10000-1000) + 1000;
 		setTimeout(aiMessage, randomTime);
 	};
+	function getUserName(){
+		return userName;
+	};
 	return {submitMessage:submitMessage,
-			initializeAi:initializeAi}
-}
+			initializeAi:initializeAi,
+			getUserName:getUserName,
+			loggedIn:loggedIn};
+};
 
