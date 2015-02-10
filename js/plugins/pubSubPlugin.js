@@ -1,3 +1,8 @@
+//Simple Publication And Subscription Functionality (Pub/Sub) With jQuery
+//By Ben Nadel on October 18, 2010
+//Tags: Javascript / DHTML
+//the script below was copied from http://http://www.bennadel.com/blog/2037-simple-publication-and-subscription-functionality-pub-sub-with-jquery.htm
+
         // Define the publish and subscribe jQuery extensions.
         // These will allow for pub-sub without the overhead
         // of DOM-related eventing.

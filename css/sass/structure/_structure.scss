@@ -41,7 +41,9 @@
 		position: absolute;
 		margin-left: 3%;
 		margin-top: 5%;
-
+		top:0px; 
+		bottom: 0px; 
+		overflow-y: auto;
 		.messageEntry{
 			
 			.userMessage{

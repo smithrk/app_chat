@@ -1,7 +1,7 @@
 var messageView = function(){
 	$el = document.getElementById("chatRoom1");
 	post = function(message){
-		var oldscrollHeight = $el.attr("scrollHeight") - 20;
+		//var oldscrollHeight = $el.attr("scrollHeight") - 20;
 		var messageEntryEl = document.createElement('p');
 		messageEntryEl.className = "messageEntry";
 		var userNameEl = document.createElement('span');
@@ -12,7 +12,6 @@ var messageView = function(){
 		messageEntryEl.appendChild(userMessageEl);
 		userNameEl.innerHTML= message.userName+": ";
 		this.$el.appendChild(messageEntryEl);
-		debugger
 		userMessageEl.innerHTML= message.message;
 		/*var div = $('element.autoscrolling');
 		setInterval(function(){
