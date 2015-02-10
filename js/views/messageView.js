@@ -1,6 +1,8 @@
-var messageView = function(){
-	$el = document.getElementById("chatRoom1");
-	post = function(message){
+//This view creates all of the elements inside of the chatRoom1 div, assigns their class names, and passes data to the
+//DOM via .innerHTML
+var messageView = function(){					//namespace function
+	$el = document.getElementById("chatRoom1");	//variable to clean up coding and access the chatRoom1 <div> in index.html
+	post = function(message){		//creates elements, assigns classes, and passes data to the DOM
 		//var oldscrollHeight = $el.attr("scrollHeight") - 20;
 		var messageEntryEl = document.createElement('p');
 		messageEntryEl.className = "messageEntry";
