@@ -3,7 +3,7 @@ var chatRoomController = function(){
 	var displayUsersView = new usersOnlineView(); 
 	var users = [];
 	var messages = [];
-	//observer = $.observer(messages);
+	var element = document.getElementById("chatRoom1");
 	var initialize = function(){
 		$.subscribe("messagePost", view, function(e){
 			var messageCount = messages.length -1;
@@ -37,7 +37,6 @@ var chatRoomController = function(){
 	var login = function(){
 		loggedIn = true;
 		displayUsersView.render(users);
-		//find model in array by something
 	};
 	var logout = function(){
 		var i = users.length -1;

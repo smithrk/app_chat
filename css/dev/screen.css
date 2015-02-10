@@ -59,7 +59,7 @@
   display: inline-block;
   background-color: #ffffff;
   padding-left: 10px;
-  overflow: scroll;
+  overflow: auto;
   border: 5px inset #f3f1f1;
   position: absolute;
   margin-left: 3%;

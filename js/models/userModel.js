@@ -7,11 +7,15 @@ var userModel = function(userName, Id){
 	}
 	var messages = [
 	
-	"What it is y'all?",
+	"Hello everyone!",
 	"Hi ",
-	"Message Three",
-	"Message Four",
-	"Message Five"];
+	"Hey ",
+	"Hola ",
+	"bonjour",
+	"ahoj",
+	"hallo",
+	"Dia duit",
+	"здравствуйте"];
 
 	function submitMessage(message){
 		appChatRoom.chatRoom.post(userName, message);

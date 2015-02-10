@@ -1,15 +1,6 @@
 var usersOnlineView = function(){
 	$el = document.getElementById("chatUsers");
-	var displayUsers = function(users){
-		
-		
-		
-		
-		userEl.innerHTML = users[0].userName;
-		
-		
-		
-	};
+
 	var render = function(users){
 		this.$el.innerHTML = "";
 		var usersOnlineHeaderEl = document.createElement('div');
@@ -32,7 +23,6 @@ var usersOnlineView = function(){
 	};
 	return {
 		$el: $el,
-		displayUsers: displayUsers,
 		render:render
 	};
 };
