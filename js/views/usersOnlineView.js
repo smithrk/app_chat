@@ -11,13 +11,9 @@ var usersOnlineView = function(){ 				//namespace function
 		var userListContainerEl = document.createElement('div');
 		userListContainerEl.className = "userListContainer";
 		this.$el.appendChild(userListContainerEl);
-		var usersOnlineFooterEl = document.createElement('div');
-		usersOnlineFooterEl.className = "usersOnlineFooter";
-		var usersOnlineSearchImg = document.createElement('img');
-		usersOnlineSearchImg.className = "usersOnlineSearchImg";
 		for(i=0; i < users.length; i++){
 			var userEl = document.createElement('li');
-			userEl.className = "userOnlineName";
+			userEl.className = "userOnlineName userName";
 			userListContainerEl.appendChild(userEl);
 			userEl.innerHTML = users[i].getUserName(); 
 		};

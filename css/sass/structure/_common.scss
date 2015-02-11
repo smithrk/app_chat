@@ -1,0 +1,25 @@
+//this file contains all of the general app styles 
+.mainWindow{
+	background-image: url("/assets/images/back.png");
+	background-repeat: repeat;
+	height:100%;
+	width:100%;
+	padding-top: 70px;
+	.chatWrapper{							//this is the wrapper div for the message, onlineUsers, and entry form views
+		height: 90%;
+		min-height: 325px;
+		width: 90%;
+		background-color: $darkGrey;
+		border-style: solid;
+		border-width: 5px;
+		position: relative;
+		margin-left: 5%;
+		border-radius: 10px;
+		border: 3px solid $jetBlack;
+		box-shadow: 10px 10px 10px $darkGrey;
+	}
+}
+	
+	
+	
+	

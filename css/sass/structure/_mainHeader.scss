@@ -1,0 +1,13 @@
+//This contains all styling for the page header
+.mainHeader{
+		background-color: $jetBlack;
+		color: $snowWhite;
+		height: 60px;
+		width: 180px;
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius: 10px;
+		position: absolute;
+		text-align: center;
+		top: 0px;
+		left: 5%;
+	}

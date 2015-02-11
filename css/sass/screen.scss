@@ -9,10 +9,10 @@
 */
 
 @import 'colors/colors';
-@import 'fonts/fonts';
 
-/* Include the external files/plugins
-*/
+
+// Include the external files/plugins
+
 
 /*!
 * Line break
@@ -22,7 +22,11 @@
 * should and default page structure go in here. Anything specific to a single 
 * page or override should go in the pages sections.
 */
-@import 'structure/structure';
+@import 'structure/common';
+@import 'structure/mainHeader';
+@import 'structure/messageEntryFormView';
+@import 'structure/messageView';
+@import 'structure/usersOnlineView';
 @import 'themes/businessBlue';
 
 /*!

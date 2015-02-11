@@ -1,0 +1,29 @@
+//This contains all styling elements related the the usersOnlineListView
+.userListView{
+	height: 65%;
+	width: 24.5%;
+	display: inline-block;
+	background-color: $snowWhite;
+	border: 5px inset $neutralGrey;
+	position: absolute;
+	margin-top: 5%;
+	margin-left: 72%;
+	.usersOnlineHeader{					//Header and title
+		display:block;
+		background-color: $monitiseOrange;
+		height:32px;
+		width: 100%;
+		font-weight: bold;
+		text-align: -webkit-center;
+		text-align: center;
+		position: relative;
+	}
+	.usersOnlineName{					//userName in who's online list
+		display: list-item;
+		text-align: left;
+		list-style-type: disc;
+		position: relative;
+		margin-top: 2%;
+		margin-left: 2%;
+	}
+}

@@ -1,3 +1,4 @@
+#comment This file will automatically watch for changes in sass and compile them
 sc#!/bin/bash
 
 rm ../css/dev/*

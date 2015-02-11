@@ -1,0 +1,24 @@
+//This contains styling for chat window that displays usernames and messages
+.messageView{
+		height: 65%;
+		width: 65%;
+		display: inline-block;
+		background-color: $snowWhite;
+		padding-left: 10px;
+		overflow: auto;
+		border: 5px inset $neutralGrey;
+		position: absolute;
+		margin-left: 3%;
+		margin-top: 5%;
+		top:0px; 
+		bottom: 0px; 
+		overflow-y: auto;
+		.userMessage{							//styles userMessages in messagesView
+				color: $jetBlack;
+		}
+		.userName{								//styles usernames in messagesView 
+		color: $bestBuyBlue;
+		text-transform: capitalize;
+		font-weight: bold;
+	}
+}
