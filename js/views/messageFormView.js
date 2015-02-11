@@ -14,10 +14,8 @@ var messageFormView = function(){					//namespace function
 			$el.appendChild(submitButtonEl);
 	};
 	var initialize = function(){
-		$(messageFormEl).on("enter", function(){
-			$.publish(this,"userSubmit");
-		});
-		$(submitButtonEl).on("click touchstart", function(){
+		$($el).submit(function(e){
+			e.preventDefault();
 			$.publish(this,"userSubmit");
 		});
 	};
