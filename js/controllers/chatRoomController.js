@@ -31,9 +31,6 @@ var chatRoomController = function(){           	//namespace function
 			message: message
 		});
 		$.publish(this, "messagePost");//publish event for messagePost
-		var run = (function(){			//This was an attempt to get the auto scroll option working 
-  			$('#chat-scroll').animate({scrollTop: $('#chat-scroll').get(0).scrollHeight}, 2000);
-  		});
 	};
 	var getLastMessage = function(){ //this is designed to point to to the last message object stored
 		
