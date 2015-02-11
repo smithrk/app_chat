@@ -13,7 +13,7 @@ var messageView = function(){					//namespace function
 			messageEntryEl.appendChild(userNameEl);
 			messageEntryEl.appendChild(userMessageEl);
 			userNameEl.innerHTML= message.userName+": ";
-			this.$el.appendChild(messageEntryEl);
+			$el.appendChild(messageEntryEl);
 			userMessageEl.innerHTML= message.message;
 			render();
 	};

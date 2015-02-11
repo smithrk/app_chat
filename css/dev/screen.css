@@ -7,8 +7,6 @@
 * improve the end user experience. If the outputted file is found to be too
 * large, it can be broken up into smaller files.
 */
-/* Include the external files/plugins
-*/
 /*!
 * Line break
 */
@@ -17,28 +15,15 @@
 * should and default page structure go in here. Anything specific to a single 
 * page or override should go in the pages sections.
 */
-/* line 1, ../sass/structure/_structure.scss */
+/* line 2, ../sass/structure/_common.scss */
 .mainWindow {
-  background-image: url("/assets/images/back.png");
+  background-image: url("../../assets/images/back.png");
   background-repeat: repeat;
   height: 100%;
   width: 100%;
   padding-top: 70px;
 }
-/* line 7, ../sass/structure/_structure.scss */
-.mainWindow .mainHeader {
-  background-color: #000;
-  color: #ffffff;
-  height: 60px;
-  width: 180px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  position: absolute;
-  text-align: center;
-  top: 0px;
-  left: 5%;
-}
-/* line 20, ../sass/structure/_structure.scss */
+/* line 8, ../sass/structure/_common.scss */
 .mainWindow .chatWrapper {
   height: 90%;
   min-height: 325px;
@@ -52,60 +37,23 @@
   border: 3px solid #000;
   box-shadow: 10px 10px 10px darkgrey;
 }
-/* line 33, ../sass/structure/_structure.scss */
-.mainWindow .messageView {
-  height: 65%;
-  width: 65%;
-  display: inline-block;
-  background-color: #ffffff;
-  padding-left: 10px;
-  overflow: auto;
-  border: 5px inset #f3f1f1;
+
+/* line 2, ../sass/structure/_mainHeader.scss */
+.mainHeader {
+  background-color: #000;
+  color: #ffffff;
+  height: 60px;
+  width: 180px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   position: absolute;
-  margin-left: 3%;
-  margin-top: 5%;
-  top: 0px;
-  bottom: 0px;
-  overflow-y: auto;
-}
-/* line 49, ../sass/structure/_structure.scss */
-.mainWindow .messageView .messageEntry .userMessage {
-  color: #000;
-}
-/* line 54, ../sass/structure/_structure.scss */
-.mainWindow .userListView {
-  height: 65%;
-  width: 24.5%;
-  display: inline-block;
-  background-color: #ffffff;
-  border: 5px inset #f3f1f1;
-  position: absolute;
-  margin-top: 5%;
-  margin-left: 72%;
-}
-/* line 63, ../sass/structure/_structure.scss */
-.mainWindow .userListView .usersOnlineHeader {
-  display: block;
-  background-color: #fab83a;
-  height: 32px;
-  width: 100%;
-  font-weight: bold;
-  text-align: -webkit-center;
   text-align: center;
-  position: relative;
+  top: 0px;
+  left: 5%;
 }
-/* line 74, ../sass/structure/_structure.scss */
-.mainWindow .userListView .userOnlineName {
-  text-transform: capitalize;
-  display: list-item;
-  text-align: left;
-  list-style-type: disc;
-  position: relative;
-  margin-top: 2%;
-  margin-left: 2%;
-}
-/* line 84, ../sass/structure/_structure.scss */
-.mainWindow .messageEntryFormView {
+
+/* line 2, ../sass/structure/_messageEntryFormView.scss */
+#messageFormView {
   height: 19.5%;
   width: 100%;
   bottom: 0px;
@@ -115,8 +63,8 @@
   border-bottom-right-radius: 10px;
   border: 0px solid #f3f1f1;
 }
-/* line 93, ../sass/structure/_structure.scss */
-.mainWindow .messageEntryFormView #inputMessageBlock {
+/* line 11, ../sass/structure/_messageEntryFormView.scss */
+#messageFormView #inputMessageBlock {
   height: 32px;
   width: 54%;
   background-color: #ffffff;
@@ -127,8 +75,8 @@
   margin-left: 3%;
   margin-bottom: .5%;
 }
-/* line 104, ../sass/structure/_structure.scss */
-.mainWindow .messageEntryFormView input[type=submit] {
+/* line 22, ../sass/structure/_messageEntryFormView.scss */
+#messageFormView #inputMessageButton {
   background-color: #fab83a;
   font-weight: bold;
   display: inline-block;
@@ -146,31 +94,64 @@
   margin-left: 60%;
   margin-bottom: 0.5%;
 }
-/* line 121, ../sass/structure/_structure.scss */
-.mainWindow .userName {
+
+/* line 2, ../sass/structure/_messageView.scss */
+.messageView {
+  height: 65%;
+  width: 65%;
+  display: inline-block;
+  background-color: #ffffff;
+  padding-left: 10px;
+  overflow: auto;
+  border: 5px inset #f3f1f1;
+  position: absolute;
+  margin-left: 3%;
+  margin-top: 5%;
+  top: 0px;
+  bottom: 0px;
+  overflow-y: auto;
+}
+/* line 16, ../sass/structure/_messageView.scss */
+.messageView .userMessage {
+  color: #000;
+}
+/* line 19, ../sass/structure/_messageView.scss */
+.messageView .userName {
   color: #003B64;
   text-transform: capitalize;
   font-weight: bold;
 }
-/* line 126, ../sass/structure/_structure.scss */
-.mainWindow .loginPage {
-  background-color: #003B64;
-  height: 100%;
-  width: 100%;
+
+/* line 2, ../sass/structure/_usersOnlineView.scss */
+.userListView {
+  height: 65%;
+  width: 24.5%;
+  display: inline-block;
+  background-color: #ffffff;
+  border: 5px inset #f3f1f1;
   position: absolute;
+  margin-top: 5%;
+  margin-left: 72%;
+}
+/* line 11, ../sass/structure/_usersOnlineView.scss */
+.userListView .usersOnlineHeader {
+  display: block;
+  background-color: #fab83a;
+  height: 32px;
+  width: 100%;
+  font-weight: bold;
+  text-align: -webkit-center;
   text-align: center;
-}
-/* line 132, ../sass/structure/_structure.scss */
-.mainWindow .loginPage .loginContainer {
-  background-color: #f3f1f1;
-  height: 50%;
-  width: 50%;
   position: relative;
-  margin: 12% 23%;
 }
-/* line 139, ../sass/structure/_structure.scss */
-.mainWindow .loginPage .welcomeMessage {
-  padding-top: 10%;
+/* line 21, ../sass/structure/_usersOnlineView.scss */
+.userListView .usersOnlineName {
+  display: list-item;
+  text-align: left;
+  list-style-type: disc;
+  position: relative;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
 /*!

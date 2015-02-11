@@ -4,7 +4,7 @@
 		<title>Chat Room</title>
 		<meta name="description" content="chat room for general discussion topics">
 		<meta name="keywords" content="chat chatroom general discussion">
-		<link rel="stylesheet" type="text/css" href="/css/dev/screen.css">
+		<link rel="stylesheet" type="text/css" href="./css/dev/screen.css">
 		<!--[if lt IE 9]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   		<![endif]-->
@@ -19,20 +19,20 @@
 				</div>
 				<div id="chatUsers" class="userListView">
 				</div>
-				<div class="messageEntryFormView">
-					<input id="inputMessageBlock" type="text" name="firstname">
-					<input type="submit" />
+				<div id="messageFormView">
+					
 
 				</div>
 			</div>
 		</section>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="/js/plugins/pubSubPlugin.js"></script> 
-	<script src="/js/views/messageView.js"></script>    
-	<script src="/js/views/usersOnlineView.js"></script>
-	<script src="/js/models/messageModel.js"></script> 
-	<script src="/js/models/userModel.js"></script> 
-	<script src="/js/controllers/chatRoomController.js"></script> 
-	<script src="/js/app-chatroom.js"></script>
+	<script src="./js/plugins/pubSubPlugin.js"></script> 
+	<script src="./js/views/messageFormView.js"></script>
+	<script src="./js/views/messageView.js"></script>    
+	<script src="./js/views/usersOnlineView.js"></script>
+	<script src="./js/models/messageModel.js"></script> 
+	<script src="./js/models/userModel.js"></script> 
+	<script src="./js/controllers/chatRoomController.js"></script> 
+	<script src="./js/app-chatroom.js"></script>
 </html>

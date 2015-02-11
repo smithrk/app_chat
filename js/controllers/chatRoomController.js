@@ -3,6 +3,7 @@
 var chatRoomController = function(){           	//namespace function
 	var view = new messageView();				//declaration to create new instances of messageView
 	var displayUsersView = new usersOnlineView(); //declaration to create new instances of usersOnlineView
+	var displayFormView = new messageFormView();  //declaration to create new instances of messageFormView
 	var users = [];								//array used to store objects of userModel
 	var messages = [];							//array used to store objects messageModel
 	var element = document.getElementById("chatRoom1");//variable declared to keep code clean when accessing chatRoom1 div element
@@ -15,6 +16,8 @@ var chatRoomController = function(){           	//namespace function
 			displayUsersView.render(users);		//renders an instance of usersOnlineView() if a change occurs in users[]
 		});
 		view.initialize();
+		displayFormView.initialize();
+		displayFormView.render();
 		displayUsersView.render(users);			//renders an instance of userOnlineView() to create div elements when initialize is called
 		users.push(new userModel("ryan", "1"));	//creates a stock ai userModel instance and stores the object in users[]
 		users.push(new userModel("janice", "2"));//creates a stock ai userModel instance and stores the object in users[]
@@ -25,20 +28,29 @@ var chatRoomController = function(){           	//namespace function
 		users[2].initializeAi();	//passes users object to initializeAi() in userModel.js
 		users[3].initializeAi();	//passes users object to initializeAi() in userModel.js
 		$.publish(this, "users:change");//publish event for users:change subcription
+		login();
 	}
 	var post = function(userName, message){//recieves values and pushes them as an object into messages[]
-		messages.push({
-			userName: userName,
-			message: message
-		});
-		$.publish(this, "messagePost");//publish event for messagePost
+		if(message !== ""){
+			messages.push({
+				userName: userName,
+				message: message
+			});
+			$.publish(this, "messagePost");//publish event for messagePost
+		};
 	};
 	var getLastMessage = function(){ //this is designed to point to to the last message object stored
 		
 		return messages[messages.length-1];
 	}
-	var login = function(){			//this is the beginning of the login logic that will be available in a later version
-		loggedIn = true;			//this variable will be used to determine if a user is still online
+	var login = function(user){			//this is the beginning of the login logic that will be available in a later version
+		var user = user || {userName:"Guest", id:99};
+		users.push(new userModel(user.userName, user.id));
+		var inputMessageBlock = $("#inputMessageBlock")[0];
+		$.subscribe("userSubmit", displayFormView, function(e){//subscribes to message post
+				post(user.userName, inputMessageBlock.value); //post function call to select a single stock message object
+				inputMessageBlock.value = "";
+		});
 		displayUsersView.render(users);
 	};
 	var logout =function(){		//this is the beginning of logout logic that will be available in a later version
