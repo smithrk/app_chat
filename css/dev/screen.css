@@ -145,7 +145,8 @@
   position: relative;
 }
 /* line 21, ../sass/structure/_usersOnlineView.scss */
-.userListView .usersOnlineName {
+.userListView .userOnlineName {
+  text-transform: capitalize;
   display: list-item;
   text-align: left;
   list-style-type: disc;

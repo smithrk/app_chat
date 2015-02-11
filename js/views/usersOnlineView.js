@@ -13,7 +13,7 @@ var usersOnlineView = function(){ 				//namespace function
 		this.$el.appendChild(userListContainerEl);
 		for(i=0; i < users.length; i++){
 			var userEl = document.createElement('li');
-			userEl.className = "userOnlineName userName";
+			userEl.className = "userOnlineName";
 			userListContainerEl.appendChild(userEl);
 			userEl.innerHTML = users[i].getUserName(); 
 		};

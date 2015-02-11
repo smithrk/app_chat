@@ -18,7 +18,8 @@
 		text-align: center;
 		position: relative;
 	}
-	.usersOnlineName{					//userName in who's online list
+	.userOnlineName{					//userName in who's online list
+		text-transform: capitalize;
 		display: list-item;
 		text-align: left;
 		list-style-type: disc;
