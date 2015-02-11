@@ -14,6 +14,7 @@ var chatRoomController = function(){           	//namespace function
 		$.subscribe("users:change", displayUsersView, function(e){//subcribes watch for changes in users[]
 			displayUsersView.render(users);		//renders an instance of usersOnlineView() if a change occurs in users[]
 		});
+		view.initialize();
 		displayUsersView.render(users);			//renders an instance of userOnlineView() to create div elements when initialize is called
 		users.push(new userModel("ryan", "1"));	//creates a stock ai userModel instance and stores the object in users[]
 		users.push(new userModel("janice", "2"));//creates a stock ai userModel instance and stores the object in users[]

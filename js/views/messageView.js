@@ -21,10 +21,18 @@ var messageView = function(){					//namespace function
 			for(i=0; i < messages.length; i++){
   				post(messages[i].message);
   			};
-  			$($el).animate({scrollTop: $($el).get(0).scrollHeight}, 2000);
-	
+  			$($el).animate({scrollTop: $($el).get(0).scrollHeight}, 0); //auto scroll from http://stackoverflow.com/questions/24772491/auto-scroll-to-bottom-div
+	};
+	var initialize = function(){
+			$($el).on("hover", function(){
+				$($el).stop();
+			});
+			/*$($el).off("mouseleave", function(){
+				$($el).animate({scrollTop: $($el).get(0).scrollHeight}, 2000);
+			})*/
 	};
 
 	return {$el: $el,
-			post: post};
+			post: post,
+			initialize:initialize};
 };
