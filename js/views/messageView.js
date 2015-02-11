@@ -27,11 +27,11 @@ var messageView = function(){					//namespace function
   			}
 	};
 	var initialize = function(){
-			$($el).mouseenter(function(){
+			$($el).on("mouseenter touchstart", function(){
 				$($el).stop();
 				noScroll = true;
 			});
-			$($el).mouseleave(function(){
+			$($el).on("mouseleave touchend", function(){
 				$($el).animate({scrollTop: $($el).get(0).scrollHeight}, 0);
 				noScroll = false;
 			});
